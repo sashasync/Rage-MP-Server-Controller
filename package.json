@@ -3,6 +3,7 @@
   "displayName": "Rage MP Server Controller",
   "description": "This will help you to start/stop/reboot your local server!",
   "version": "0.0.4",
+  "icon": "banner.png",
   "publisher": "Caballero",
   "engines": {
     "vscode": "^1.94.0"
@@ -19,6 +20,7 @@
       "theme": "dark",
       "path": "./banner.png"
     },
+    
     "configuration": {
       "type": "object",
       "title": "Rage MP Server Controller",
