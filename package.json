@@ -1,0 +1,54 @@
+{
+  "name": "rage-mp-server-controller-by-caballero",
+  "displayName": "Rage MP Server Controller by Caballero",
+  "description": "This will help you to start/stop/reboot your local server!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+        "type": "object",
+        "title": "Rage MP Server Controller",
+        "properties": {
+            "ragemp.serverPath": {
+                "type": "string",
+                "default": "C:\\RAGEMP\\server-files\\ragemp-server.exe",
+                "description": "Path to the Rage MP server executable."
+            }
+        }
+    },
+    "commands": [{
+        "command": "rage-mp-server-controller-by-caballero.startServer",
+        "title": "Start Server"
+    },
+    {
+        "command": "rage-mp-server-controller-by-caballero.stopServer",
+        "title": "Stop Server"
+    },
+    {
+        "command": "rage-mp-server-controller-by-caballero.restartServer",
+        "title": "Restart Server"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "eslint": "^9.11.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
