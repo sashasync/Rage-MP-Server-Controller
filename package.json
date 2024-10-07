@@ -2,7 +2,7 @@
   "name": "rage-mp-server-controller-by-caballero",
   "displayName": "Rage MP Server Controller",
   "description": "This will help you to start/stop/reboot your local server!",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Caballero",
   "engines": {
     "vscode": "^1.94.0"
@@ -11,9 +11,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:rage-mp-server-controller-by-caballero.startServer",
-    "onCommand:rage-mp-server-controller-by-caballero.stopServer",
-    "onCommand:rage-mp-server-controller-by-caballero.restartServer"
+    "*"
   ],
   "main": "./extension.js",
   "contributes": {
