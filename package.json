@@ -10,34 +10,43 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:rage-mp-server-controller-by-caballero.startServer",
+    "onCommand:rage-mp-server-controller-by-caballero.stopServer",
+    "onCommand:rage-mp-server-controller-by-caballero.restartServer"
   ],
   "main": "./extension.js",
   "contributes": {
     "configuration": {
-        "type": "object",
-        "title": "Rage MP Server Controller",
-        "properties": {
-            "ragemp.serverPath": {
-                "type": "string",
-                "default": "C:\\RAGEMP\\server-files\\ragemp-server.exe",
-                "description": "Path to the Rage MP server executable."
-            }
+      "type": "object",
+      "title": "Rage MP Server Controller",
+      "properties": {
+        "ragemp.serverPath": {
+          "type": "string",
+          "default": "C:\\RAGEMP\\server-files\\ragemp-server.exe",
+          "description": "Path to the Rage MP server executable."
         }
+      }
     },
-    "commands": [{
+    "commands": [
+      {
         "command": "rage-mp-server-controller-by-caballero.startServer",
         "title": "Start Server"
-    },
-    {
+      },
+      {
         "command": "rage-mp-server-controller-by-caballero.stopServer",
         "title": "Stop Server"
-    },
-    {
+      },
+      {
         "command": "rage-mp-server-controller-by-caballero.restartServer",
         "title": "Restart Server"
-    }]
+      }
+    ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sashasync/Rage-MP-Server-Controller.git"
+  },
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
